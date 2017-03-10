@@ -32,6 +32,6 @@ subsetAct <- merge(subset, actlabels,by.x='actvity_id',by.y = "V1",all.x=TRUE)
 dfByActSub <- aggregate(. ~subject_id + actvity_id, subsetAct, mean)
 dfByActSub <- dfByActSub[order(dfByActSub$subject_id, dfByActSub$actvity_id),]
 
-write.table(dfByActSub, "SubjectActivityByTidySet.txt", row.name=FALSE,col.names = FALSE)
+write.table(dfByActSub, "SubjectActivityByTidySet.txt", row.name=FALSE)
 
 
